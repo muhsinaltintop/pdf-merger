@@ -19,7 +19,7 @@ export default function Home() {
 
   const mergePDFs = async () => {
     if (pdfFiles.length < 2) {
-      alert("En az iki PDF dosyası yükleyin.");
+      alert("Please upload at least two PDF files.");
       return;
     }
 
@@ -37,17 +37,17 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center p-6 gap-4">
-      <h1 className="text-2xl font-bold">PDF Birleştirme Aracı</h1>
+      <h1 className="text-2xl font-bold">PDF Merger Tool</h1>
       {pdfFiles.length === 0 ? (
         <input type="file" accept="application/pdf" onChange={handleFileChange} />
       ) : (
         <>
           {pdfFiles.map((_, index) => (
-            <p key={index}>PDF {index + 1} yüklendi.</p>
+            <p key={index}>PDF {index + 1} uploaded.</p>
           ))}
           <input type="file" accept="application/pdf" onChange={handleFileChange} />
           <button onClick={mergePDFs} className="bg-blue-500 text-white px-4 py-2 rounded">
-            PDF'leri Birleştir ve Kaydet
+            Merge and Save PDFs
           </button>
         </>
       )}
