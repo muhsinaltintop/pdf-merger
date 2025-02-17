@@ -3,7 +3,7 @@ import { useState } from "react";
 import { PDFDocument } from "pdf-lib";
 import { saveAs } from "file-saver";
 
-export default function Home() {
+export default function OneByOne() {
   const [pdfFiles, setPdfFiles] = useState([]);
 
   const handleFileChange = async (event) => {
