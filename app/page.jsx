@@ -19,6 +19,12 @@ export default function HomePage() {
       >
         Go to Bulk Upload
       </button>
+      <button 
+        onClick={() => router.push("/jpegToPng")}
+        className="bg-orange-500 text-white px-4 py-2 rounded"
+      >
+        Jpeg to PNG Converter
+      </button>
     </div>
   );
 }
